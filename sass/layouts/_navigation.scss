@@ -1,0 +1,41 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 1.2rem;
+  background-color: $primary-color;
+  position: fixed;
+  top: 7.2rem;
+  left: 7.2rem;
+
+  .logo {
+    width: 12rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    li {
+      list-style: none;
+
+      .nav-item {
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	color: $secondary-color;
+	padding: 1.2rem;
+	font-weight: 300;
+      }
+    }
+  }
+}
