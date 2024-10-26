@@ -14,5 +14,16 @@
   line-height: 1;
   letter-spacing: 3px;
   color: $secondary-color;
-  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.body-heading {
+  font-family: $secondary-font;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1;
+  color: $secondary-color;
+  text-transform: uppercase;
+  font-weight: lighter;
 }

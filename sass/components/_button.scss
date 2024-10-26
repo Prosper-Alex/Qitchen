@@ -1,6 +1,7 @@
 .btn {
   border: none;
   text-decoration: none;
+  cursor: pointer;
 
   &:focus {
     outline: none;
@@ -15,5 +16,25 @@
     background-color: $tertiary-color;
     border: 1px solid $border-color;
     border-radius: 8px;
+  }
+
+  &-icon {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: $tertiary-color;
+    border: 1px solid $border-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.sm {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+
+    svg {
+      font-size: 1.8rem;
+    }
   }
 }
