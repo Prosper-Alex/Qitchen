@@ -16,6 +16,10 @@
     background-color: $tertiary-color;
     border: 1px solid $border-color;
     border-radius: 8px;
+
+    @include respond(phone) {
+      font-size: 1rem;
+    }
   }
 
   &-icon {
@@ -28,6 +32,11 @@
     justify-content: center;
     align-items: center;
 
+    @include respond(phone-medium) {
+      height: 2rem;
+      width: 2rem;
+    }
+
     &.sm {
       height: 3.2rem;
       width: 3.2rem;
@@ -35,6 +44,10 @@
 
     svg {
       font-size: 1.8rem;
+
+      @include respond(phone-medium) {
+        font-size: 1.4rem;
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Satoshi', sans-serif;
-  src: url('/assets/fonts/satoshi-variable.ttf');
+  font-family: "Satoshi", sans-serif;
+  src: url("/assets/fonts/satoshi-variable.ttf");
 }
 
 @font-face {
-  font-family: 'Forum', serif;
-  src: url('/assets/fonts/forum-regular.ttf');
+  font-family: "Forum", serif;
+  src: url("/assets/fonts/forum-regular.ttf");
 }
 
 .heading-primary {
@@ -16,6 +16,24 @@
   color: $secondary-color;
   text-transform: uppercase;
   font-weight: lighter;
+
+  @include respond(tab-land) {
+    font-size: 8rem;
+    position: absolute;
+    bottom: 10%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone-medium) {
+    font-size: 3.5rem;
+  }
 }
 
 .body-heading {
@@ -26,4 +44,8 @@
   color: $secondary-color;
   text-transform: uppercase;
   font-weight: lighter;
+
+  @include respond(tab-land) {
+    font-size: 1rem;
+  }
 }

@@ -1,4 +1,7 @@
 .navigation {
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,13 +10,25 @@
   border-radius: 1.2rem;
   background-color: $primary-color;
   position: fixed;
-  top: 7.2rem;
-  left: 7.2rem;
+
   z-index: 10;
+
+  @include respond(tab-land) {
+    top: 5rem;
+    left: 5rem;
+  }
+
+  @include respond(phone-medium) {
+    top: 4rem;
+    left: 4rem;
+  }
 
   .logo {
     width: 12rem;
 
+    @include respond(tab-port) {
+      width: 8rem;
+    }
     img {
       width: 100%;
       height: auto;
@@ -36,6 +51,14 @@
         color: $secondary-color;
         padding: 1.2rem;
         font-weight: 300;
+
+        @include respond(phone) {
+          font-size: 1rem;
+        }
+
+        @include respond(phone-medium) {
+          padding: 0.5rem;
+        }
       }
     }
   }
