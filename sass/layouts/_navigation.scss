@@ -1,4 +1,4 @@
-.navigation {
+.navigation-dk {
   position: absolute;
   top: 7rem;
   left: 7rem;
@@ -10,6 +10,10 @@
   border-radius: 1.2rem;
   background-color: $primary-color;
   position: fixed;
+
+  @include respond(phone) {
+    display: none;
+  }
 
   z-index: 10;
 
@@ -61,5 +65,28 @@
         }
       }
     }
+  }
+}
+
+.navigation-pb {
+  .navigation-checkbox {
+  }
+
+  .navigation-button {
+  }
+
+  .navigation-background {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .nav-links {
+    display: none;
+    @include respond(phone) {
+      display: flex;
+    }
+  }
+
+  .nav-item {
   }
 }

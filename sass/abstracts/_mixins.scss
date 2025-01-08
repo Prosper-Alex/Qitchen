@@ -88,6 +88,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
       @content;
     } //1200px
   }
+  @if $breakpoint == tab-land-big {
+    @media only screen and (min-width: 76.25em) {
+      @content;
+    } //1200px
+  }
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 112.5em) {
       @content;
