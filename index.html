@@ -6,8 +6,9 @@
     <title>Qitchen - Restaurant Website</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
+
   <body>
-    <nav class="navigation-dk">
+    <nav class="navigation">
       <a href="/">
         <figure class="logo">
           <img src="/assets/images/logo.png" alt="Qitchen" />
@@ -22,36 +23,6 @@
         </li>
         <li>
           <a href="#" class="btn btn-primary">Book a Table</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="navigation-pb">
-      <input type="checkbox" class="navigation-checkbox" id="navi-toggle" />
-
-      navigation-button-wrapper
-      <a href="/">
-        <figure class="logo">
-          <img src="/assets/images/logo.png" alt="Qitchen" />
-        </figure>
-      </a>
-
-      <label for="navi-toggle" class="navigation-button">MENU</label>
-
-      <div class="navigation-background">&nbsp;</div>
-      <ul class="nav-links">
-        <li>
-          <a href="menu.html" class="nav-item">Menu</a>
-        </li>
-        <li><a href="#" class="nav-item">Reservation</a></li>
-        <li>
-          <a href="#" class="nav-item">About</a>
-        </li>
-        <li>
-          <a href="#" class="nav-item">Contact</a>
-        </li>
-        <li>
-          <a href="#" class="nav-item">Blog</a>
         </li>
       </ul>
     </nav>
@@ -115,98 +86,40 @@
         </div>
       </header>
       <aside class="features">
-        <a href="#" class="feature">
-          <figure>
-            <a href="menu.html">
-              <img src="/assets/images/menu-feature.png" alt="Menu" />
-            </a>
-            <figcaption class="cta">
-              <div>
-                <img
-                  src="/assets/icons/rounded-edge.svg"
-                  alt="Rounded Edge"
-                  class="radius top" />
-                <span class="body-heading">Menu</span>
-                <button class="btn btn-icon sm">
-                  <svg
-                    width="1.125rem"
-                    height="1.125rem"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.7625 8.26252L9.2625 12.7625C9.22803 12.797 9.1871 12.8243 9.14206 12.843C9.09702 12.8616 9.04875 12.8712 9 12.8712C8.95125 12.8712 8.90298 12.8616 8.85794 12.843C8.8129 12.8243 8.77197 12.797 8.7375 12.7625C8.70303 12.728 8.67568 12.6871 8.65703 12.6421C8.63837 12.597 8.62877 12.5488 8.62877 12.5C8.62877 12.4513 8.63837 12.403 8.65703 12.358C8.67568 12.3129 8.70303 12.272 8.7375 12.2375L12.5938 8.37502H2.5C2.40054 8.37502 2.30516 8.33551 2.23483 8.26518C2.16451 8.19485 2.125 8.09947 2.125 8.00002C2.125 7.90056 2.16451 7.80518 2.23483 7.73485C2.30516 7.66452 2.40054 7.62502 2.5 7.62502H12.5938L8.7375 3.76252C8.66788 3.6929 8.62877 3.59847 8.62877 3.50002C8.62877 3.40156 8.66788 3.30713 8.7375 3.23752C8.80712 3.1679 8.90154 3.12878 9 3.12878C9.09846 3.12878 9.19288 3.1679 9.2625 3.23752L13.7625 7.73752C13.798 7.77137 13.8264 7.8121 13.8457 7.85722C13.865 7.90234 13.875 7.95092 13.875 8.00002C13.875 8.04911 13.865 8.09769 13.8457 8.14281C13.8264 8.18793 13.798 8.22866 13.7625 8.26252Z"
-                      fill="#EFE7D2" />
-                  </svg>
-                </button>
-                <img
-                  src="/assets/icons/rounded-edge.svg"
-                  alt="Rounded Edge"
-                  class="radius bottom" />
-              </div>
-            </figcaption>
+        <a href="#" class="card">
+          <figure class="comp">
+            <img src="/assets/images/menu-feature.png" alt="" />
           </figure>
+          <div class="tab">
+            <p class="titleBtn">
+              <span>menu</span>
+              <img src="/assets/images/Badge.svg" alt="" />
+            </p>
+          </div>
         </a>
-        <a href="#" class="feature">
-          <figure>
-            <img src="/assets/images/reservation.png" alt="Reservation" />
-            <figcaption class="cta">
-              <div>
-                <img
-                  src="/assets/icons/rounded-edge.svg"
-                  alt="Rounded Edge"
-                  class="radius top" />
-                <span class="body-heading">Reservation</span>
-                <button class="btn btn-icon sm">
-                  <svg
-                    width="1.125rem"
-                    height="1.125rem"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.7625 8.26252L9.2625 12.7625C9.22803 12.797 9.1871 12.8243 9.14206 12.843C9.09702 12.8616 9.04875 12.8712 9 12.8712C8.95125 12.8712 8.90298 12.8616 8.85794 12.843C8.8129 12.8243 8.77197 12.797 8.7375 12.7625C8.70303 12.728 8.67568 12.6871 8.65703 12.6421C8.63837 12.597 8.62877 12.5488 8.62877 12.5C8.62877 12.4513 8.63837 12.403 8.65703 12.358C8.67568 12.3129 8.70303 12.272 8.7375 12.2375L12.5938 8.37502H2.5C2.40054 8.37502 2.30516 8.33551 2.23483 8.26518C2.16451 8.19485 2.125 8.09947 2.125 8.00002C2.125 7.90056 2.16451 7.80518 2.23483 7.73485C2.30516 7.66452 2.40054 7.62502 2.5 7.62502H12.5938L8.7375 3.76252C8.66788 3.6929 8.62877 3.59847 8.62877 3.50002C8.62877 3.40156 8.66788 3.30713 8.7375 3.23752C8.80712 3.1679 8.90154 3.12878 9 3.12878C9.09846 3.12878 9.19288 3.1679 9.2625 3.23752L13.7625 7.73752C13.798 7.77137 13.8264 7.8121 13.8457 7.85722C13.865 7.90234 13.875 7.95092 13.875 8.00002C13.875 8.04911 13.865 8.09769 13.8457 8.14281C13.8264 8.18793 13.798 8.22866 13.7625 8.26252Z"
-                      fill="#EFE7D2" />
-                  </svg>
-                </button>
-                <img
-                  src="/assets/icons/rounded-edge.svg"
-                  alt="Rounded Edge"
-                  class="radius bottom" />
-              </div>
-            </figcaption>
+
+        <a href="#" class="card">
+          <figure class="comp">
+            <img src="/assets/images/reservation.png" alt="" />
           </figure>
+          <div class="tab">
+            <p class="titleBtn">
+              <span>menu</span>
+              <img src="/assets/images/Badge.svg" alt="" />
+            </p>
+          </div>
         </a>
-        <a href="#" class="feature">
-          <figure>
-            <img src="/assets/images/restaurant.png" alt="Our Restaurant" />
-            <figcaption class="cta">
-              <div>
-                <img
-                  src="/assets/icons/rounded-edge.svg"
-                  alt="Rounded Edge"
-                  class="radius top"
-                  sm />
-                <span class="body-heading">Our Restaurant</span>
-                <button class="btn btn-icon sm">
-                  <svg
-                    width="1.125rem"
-                    height="1.125rem"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.7625 8.26252L9.2625 12.7625C9.22803 12.797 9.1871 12.8243 9.14206 12.843C9.09702 12.8616 9.04875 12.8712 9 12.8712C8.95125 12.8712 8.90298 12.8616 8.85794 12.843C8.8129 12.8243 8.77197 12.797 8.7375 12.7625C8.70303 12.728 8.67568 12.6871 8.65703 12.6421C8.63837 12.597 8.62877 12.5488 8.62877 12.5C8.62877 12.4513 8.63837 12.403 8.65703 12.358C8.67568 12.3129 8.70303 12.272 8.7375 12.2375L12.5938 8.37502H2.5C2.40054 8.37502 2.30516 8.33551 2.23483 8.26518C2.16451 8.19485 2.125 8.09947 2.125 8.00002C2.125 7.90056 2.16451 7.80518 2.23483 7.73485C2.30516 7.66452 2.40054 7.62502 2.5 7.62502H12.5938L8.7375 3.76252C8.66788 3.6929 8.62877 3.59847 8.62877 3.50002C8.62877 3.40156 8.66788 3.30713 8.7375 3.23752C8.80712 3.1679 8.90154 3.12878 9 3.12878C9.09846 3.12878 9.19288 3.1679 9.2625 3.23752L13.7625 7.73752C13.798 7.77137 13.8264 7.8121 13.8457 7.85722C13.865 7.90234 13.875 7.95092 13.875 8.00002C13.875 8.04911 13.865 8.09769 13.8457 8.14281C13.8264 8.18793 13.798 8.22866 13.7625 8.26252Z"
-                      fill="#EFE7D2" />
-                  </svg>
-                </button>
-                <img
-                  src="/assets/icons/rounded-edge.svg"
-                  alt="Rounded Edge"
-                  class="radius bottom" />
-              </div>
-            </figcaption>
+
+        <a href="#" class="card">
+          <figure class="comp">
+            <img src="/assets/images/img.jpg" alt="" />
           </figure>
+          <div class="tab">
+            <p class="titleBtn">
+              <span>menu</span>
+              <img src="/assets/images/Badge.svg" alt="" />
+            </p>
+          </div>
         </a>
       </aside>
     </main>
