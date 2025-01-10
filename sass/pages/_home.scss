@@ -36,11 +36,11 @@
 
       @include respond(tab-land) {
         height: 96vh;
-        padding: 4rem;
+        padding: 3rem;
       }
 
       @include respond(phone-medium) {
-        height: 97vh;
+        height: 89vh;
         padding: 2rem;
       }
     }

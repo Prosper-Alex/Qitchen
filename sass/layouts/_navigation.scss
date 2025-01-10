@@ -79,7 +79,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin: 1.2rem 0 3rem;
+    margin: 1.2rem 0;
     .logo {
       width: 10rem;
 
@@ -93,6 +93,10 @@
   .navigation-checkbox {
     display: none;
   }
+  .navigation-checkbox ~ .navigation-main {
+    opacity: 1;
+    width: 100%;
+  }
 
   .navigation-button {
     border-radius: 3px;
@@ -100,7 +104,11 @@
     padding: 0.7rem;
     height: 4rem;
     width: 3rem;
-    z-index: 2000;
+    z-index: 3000;
+    -webkit-z-index: 3000;
+    -moz-z-index: 3000;
+    -ms-z-index: 3000;
+    -o-z-index: 3000;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -112,8 +120,10 @@
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100%;
+
     z-index: 1500;
+    width: 0;
+    opacity: 0;
 
     .nav-links {
       @include respond(phone) {
@@ -141,20 +151,47 @@
   }
 
   .nav-item {
-    font-size: 3rem;
-    padding: 0.8rem;
-    font-weight: 300;
-    font-weight: lighter;
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    background-image: linear-gradient(
-      120deg,
-      orangered 0%,
-      orangered 50%,
-      #fff 50%
-    );
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: $primary-font;
+      font-size: 3rem;
+      padding: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: inherit;
+      font-weight: lighter;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        #fff 50%
+      );
+      border-radius: 4px;
+      background-size: 220%;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $primary-color;
+      transform: translateX(1rem);
+      -webkit-transform: translateX(1rem);
+      -moz-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+      -o-transform: translateX(1rem);
+    }
   }
 }
