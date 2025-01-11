@@ -39,6 +39,10 @@
         padding: 3rem;
       }
 
+      @include respond(phone) {
+        height: 90vh;
+      }
+
       @include respond(phone-medium) {
         height: 89vh;
         padding: 2rem;
@@ -56,6 +60,10 @@
     font-family: $secondary-font;
     grid-template-columns: 1fr;
     gap: 1.6rem;
+
+    @include respond(tab-port) {
+      height: 100%;
+    }
 
     // .feature {
     //   display: inline-block;
@@ -98,6 +106,11 @@
       overflow: hidden;
       position: relative;
       height: calc(100% / 3);
+      @include respond(tab-port) {
+        height: 40rem;
+        width: 100%;
+        object-fit: cover;
+      }
 
       .comp {
         width: 100%;
