@@ -27,6 +27,25 @@
     left: 4rem;
   }
 
+  .logo-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .open {
+    display: flex;
+    padding: 0.7rem;
+    font-size: 2.2rem;
+    border-radius: 9px;
+    align-items: center;
+    border: 1px solid $default-border;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+  }
+
   .logo {
     width: 12rem;
 
