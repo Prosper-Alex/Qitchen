@@ -51,6 +51,10 @@
         height: 86vh;
         padding: 2rem;
       }
+      @include respond(phone-very-small) {
+        height: 82vh;
+        padding: 2rem;
+      }
     }
 
     .cta {
