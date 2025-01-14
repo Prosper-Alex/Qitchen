@@ -56,9 +56,10 @@
 
   .features {
     flex: 1;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     font-family: $secondary-font;
-    grid-template-columns: 1fr;
+
     gap: 1.6rem;
 
     @include respond(tab-port) {
@@ -120,6 +121,16 @@
           width: 100%;
           display: block;
           z-index: -1;
+          @include respond(tab-land) {
+            height: 50rem;
+            object-fit: cover;
+            width: 100%;
+          }
+          @include respond(phone) {
+            height: 40rem;
+            object-fit: cover;
+            width: 100%;
+          }
         }
       }
 

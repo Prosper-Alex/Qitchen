@@ -84,9 +84,16 @@
 
     @include respond(phone) {
       z-index: 3000;
+      .navigation-checkbox:checked ~ .logo-wrapper {
+        position: fixed;
+      }
     }
     .logo {
       width: 10rem;
+
+      @include respond(phone-medium) {
+        width: 8rem;
+      }
 
       img {
         width: 100%;
@@ -111,16 +118,35 @@
   }
 
   .navigation-button {
+    display: flex;
+    align-items: center;
+
+    padding: 0.7rem;
     border-radius: 3px;
     border: 1px solid $default-border;
-    padding: 0.7rem;
-    height: 4rem;
-    width: 3rem;
 
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+
+    .close {
+      display: none;
+      font-size: 3rem;
+    }
+
+    .open {
+      display: flex;
+      font-size: 3rem;
+    }
+
+    .navigation-checkbox:checked ~ .logo-wrapper .navigation-button .open {
+      display: none;
+    }
+
+    .navigation-checkbox:checked ~ .logo-wrapper .navigation-button .close {
+      display: flex;
+    }
   }
 
   .navigation-main {
