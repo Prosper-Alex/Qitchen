@@ -44,15 +44,16 @@
       }
 
       @include respond(phone-medium) {
-        height: 89vh;
+        height: 85vh;
         padding: 2rem;
       }
+
       @include respond(phone-small) {
-        height: 86vh;
+        height: 80vh;
         padding: 2rem;
       }
       @include respond(phone-very-small) {
-        height: 82vh;
+        height: 80vh;
         padding: 2rem;
       }
     }

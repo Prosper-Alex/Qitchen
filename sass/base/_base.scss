@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   margin: 2.4rem;
+  overflow-x: hidden !important;
 
   @include respond(phone) {
     margin: 1.4rem;

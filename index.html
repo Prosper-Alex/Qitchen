@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qitchen - Restaurant Website</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/main.css" />
   </head>
 
@@ -135,7 +137,7 @@
             <img src="/assets/images/menu-feature.png" alt="menu-img" />
           </figure>
           <div class="tab">
-            <p class="titleBtn">
+            <p class="titleBtn" data-aos="fade-right">
               <span>menu</span>
               <img src="/assets/images/Badge.svg" alt="" />
             </p>
@@ -147,7 +149,7 @@
             <img src="/assets/images/reservation.png" alt="reservation-img" />
           </figure>
           <div class="tab">
-            <p class="titleBtn">
+            <p class="titleBtn" data-aos="fade-right">
               <span>reservation</span>
               <img src="/assets/images/Badge.svg" alt="" />
             </p>
@@ -159,7 +161,7 @@
             <img src="/assets/images/reaturant.png" alt="reaturant-img" />
           </figure>
           <div class="tab">
-            <p class="titleBtn">
+            <p class="titleBtn" data-aos="fade-right">
               <span>our restaurant</span>
               <img src="/assets/images/Badge.svg" alt="" />
             </p>
@@ -169,5 +171,9 @@
     </main>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

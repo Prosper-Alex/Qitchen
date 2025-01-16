@@ -16,7 +16,8 @@
   color: $secondary-color;
   text-transform: uppercase;
   font-weight: lighter;
-
+  animation: moveinright all 0.4s;
+  -webkit-animation: moveinright all 0.4s;
   @include respond(tab-land) {
     font-size: 8rem;
     position: absolute;
