@@ -16,8 +16,6 @@
   color: $secondary-color;
   text-transform: uppercase;
   font-weight: lighter;
-  animation: moveinright all 0.4s;
-  -webkit-animation: moveinright all 0.4s;
   @include respond(tab-land) {
     font-size: 8rem;
     position: absolute;
@@ -35,6 +33,19 @@
   @include respond(phone-medium) {
     font-size: 3.5rem;
   }
+}
+
+.heading-secondary {
+  line-height: 1;
+  letter-spacing: 3px;
+  color: $secondary-color;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-family: $secondary-font;
+}
+
+.small {
+  font-size: 3.2rem;
 }
 
 .body-heading {
