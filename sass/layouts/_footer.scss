@@ -1,0 +1,27 @@
+.menu-footer {
+  border: 1px solid $default-border;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+
+  ul.menu-footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    list-style: none;
+
+    .footer-list-wrapper {
+      display: flex;
+      gap: 0.5rem;
+
+      .menu-footer-text {
+        font-size: 1.4rem;
+        color: $secondary-color;
+      }
+    }
+  }
+}

@@ -10,7 +10,11 @@
     background-image: url("/assets/images/hero-2.jpg");
     flex: 1.2;
     height: 100vh;
-    position: sticky !important;
+    position: sticky;
+    @include respond(tab-land) {
+      position: absolute;
+      height: 100vh;
+    }
   }
 
   @include respond(tab-land) {
@@ -24,8 +28,23 @@
   .menu {
     flex: 1;
     overflow-y: scroll;
+    @include respond(tab-land) {
+      overflow-y: hidden;
+    }
 
     .menu_wrapper-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 5rem;
+      border: 1px solid $default-border;
+      border-radius: $border-radius;
+      -webkit-border-radius: $border-radius;
+      -moz-border-radius: $border-radius;
+      -ms-border-radius: $border-radius;
+      -o-border-radius: $border-radius;
+      padding: 0 3rem;
+
       ul.menu_btns {
         display: flex;
         align-items: center;
@@ -38,12 +57,71 @@
         text-decoration: none;
       }
 
+      .menu_textbox {
+        overflow: hidden;
+      }
       .menu_list-header {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 6rem 0 3rem 0;
         gap: 1.5rem;
+      }
+
+      .menu-list {
+        font-family: $secondary-font;
+        font-weight: 100;
+        color: $secondary-color;
+        margin: 6rem 0 7rem 0;
+
+        .menu-list-item {
+          .menu-list-wrapper {
+            display: flex;
+            align-items: center;
+
+            .menu-dish-img {
+              height: 10rem;
+              width: 15rem;
+
+              .menu-dish-img img {
+                height: 100%;
+                width: 100%;
+              }
+            }
+
+            .menu-list-info {
+              .heading-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+
+                .menu-list-item-price {
+                  color: $menu-text;
+                  font-size: 2.2rem;
+                }
+              }
+              .menu-info-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+              }
+
+              .menu-list-item-desc {
+                font-size: 1.4rem;
+                color: $menu-text;
+                justify-content: end;
+              }
+            }
+          }
+          .menu-list-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 5rem;
+          }
+        }
       }
     }
 
