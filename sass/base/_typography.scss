@@ -46,6 +46,14 @@
 
 .small {
   font-size: 3.2rem;
+
+  @include respond(phone-medium) {
+    font-size: 2.2rem;
+  }
+
+  @include respond(phone-small) {
+    font-size: 2rem;
+  }
 }
 
 .heading-tertiary {
@@ -59,6 +67,14 @@
 
 .heading-tertiary.sm {
   font-size: 2.2rem;
+
+  @include respond(phone-medium) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(phone-s mall) {
+    font-size: 1.7rem;
+  }
 }
 
 .body-heading {
