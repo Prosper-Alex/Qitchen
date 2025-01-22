@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qitchen - Reservation Page</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <nav class="navigation-dk">
+      <div class="logo-wrapper">
+        <span
+          ><label for="navi-toggle" class="navigation-button">
+            <span class="open"><ion-icon name="menu"></ion-icon></span> </label
+        ></span>
+        <a href="index.html">
+          <figure class="logo">
+            <img src="/assets/images/logo.png" alt="Qitchen" />
+          </figure>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="menu.html" class="nav-item">Menu</a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">About</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-primary">Book a Table</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="navigation-pb">
+      <input type="checkbox" class="navigation-checkbox" id="navi-toggle" />
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <div class="logo-wrapper">
+        <span
+          ><label for="navi-toggle" class="navigation-button">
+            <span class="open"><ion-icon name="menu"></ion-icon></span>
+            <span class="close"
+              ><ion-icon name="close"></ion-icon
+            ></span> </label
+        ></span>
+        <a href="index.html">
+          <figure class="logo">
+            <img src="/assets/images/logo.png" alt="Qitchen" />
+          </figure>
+        </a>
+      </div>
+
+      <div class="navigation-main">
+        <ul class="nav-links">
+          <li>
+            <a href="menu.html" class="nav-item">Menu</a>
+          </li>
+          <li>
+            <a href="reservation.html" class="nav-item">reservation</a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">About</a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">contact</a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main">
+      <header class="header reservation">
+        <div class="textbox">
+          <h1 class="heading-primary">
+            Book <br />
+            a Table
+          </h1>
+        </div>
+
+      </header>
+      <aside class="reservation">
+        <form action="#" class="form">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-input"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group
+            ">
+                <label for="email" class="form-label">Email</label>
+                <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="Enter your email"
+                required
+                />
+            </div>
+      </aside>
+    </main>
+  </body>
+</html>

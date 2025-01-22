@@ -44,7 +44,19 @@
   font-family: $secondary-font;
 }
 
-.small {
+.heading-secondary.big {
+  font-size: 4.5rem;
+
+  @include respond(phone-medium) {
+    font-size: 3.5rem;
+  }
+
+  @include respond(phone-small) {
+    font-size: 3rem;
+  }
+}
+
+.heading-secondary.small {
   font-size: 3.2rem;
 
   @include respond(phone-medium) {
