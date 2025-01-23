@@ -10,7 +10,7 @@
 
 .heading-primary {
   font-family: $secondary-font;
-  font-size: 14rem;
+
   line-height: 1;
   letter-spacing: 3px;
   color: $secondary-color;
@@ -21,6 +21,26 @@
     position: absolute;
     bottom: 10%;
   }
+}
+
+.heading-primary.big {
+  font-size: 14rem;
+
+  @include respond(tab-port) {
+    font-size: 6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone-medium) {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-primary.medium {
+  font-size: 11rem;
 
   @include respond(tab-port) {
     font-size: 6rem;

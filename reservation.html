@@ -73,36 +73,59 @@
     <main class="main">
       <header class="header reservation">
         <div class="textbox">
-          <h1 class="heading-primary">
+          <h1 class="heading-primary medium">
             Book <br />
             a Table
           </h1>
         </div>
-
       </header>
       <aside class="reservation">
+        <div class="reservation_textbox">
+          <div class="reservation_heading-wrapper">
+            <img
+              class="menu_pin"
+              src="./assets/icons/spoon-left.svg"
+              alt="spoon-left" />
+
+            <h2 class="heading-secondary big">reservation</h2>
+            <img
+              class="menu_pin"
+              src="./assets/icons/spoon-right.svg"
+              alt="spoon-right" />
+          </div>
+          <p class="reservation_paragraph">
+            Secure your spot at Qitchen, where exceptional sushi and a
+            remarkable dining experience await.
+          </p>
+        </div>
         <form action="#" class="form">
           <div class="form-group">
-            <label for="name" class="form-label">Name</label>
+            <input type="text" placeholder="Name" class="form-group" required />
+
             <input
-              type="text"
-              id="name"
+              type="email"
               class="form-input"
-              placeholder="Enter your name"
+              placeholder="Email"
+              required />
+
+            <input
+              type="tel"
+              placeholder="Phone Number"
               required
-            />
+              class="form-input" />
           </div>
-          <div class="form-group
-            ">
-                <label for="email" class="form-label">Email</label>
-                <input
-                type="email"
-                id="email"
-                class="form-input"
-                placeholder="Enter your email"
-                required
-                />
+          <div class="form-options">
+            <div class="form-option">
+              <input type="text" placeholder="Guest" required />
             </div>
+            <div class="form-option">
+              <input type="text" placeholder="Date" required />
+            </div>
+            <div class="form-option">
+              <input type="text" placeholder="Time" required />
+            </div>
+          </div>
+        </form>
       </aside>
     </main>
   </body>
