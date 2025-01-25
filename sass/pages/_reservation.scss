@@ -31,8 +31,10 @@ main {
   .reservation {
     flex: 1;
     overflow-y: scroll;
+
     @include respond(tab-land) {
       overflow-y: hidden;
+      margin: 5rem 0;
     }
 
     .reservation_textbox {
@@ -56,6 +58,56 @@ main {
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      width: 50%;
+      margin: 0 auto;
+      background-color: transparent;
+
+      input {
+        background-color: transparent;
+        padding: 1.6rem;
+        border: none;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .br {
+        color: $secondary-color;
+        font-size: 1.4rem;
+        padding: 1.6rem;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+
+      .form-options {
+        width: 100%;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+
+        .form-option {
+          .form-option input {
+          }
+
+          input.option {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

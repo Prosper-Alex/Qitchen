@@ -51,3 +51,18 @@
     }
   }
 }
+
+a.reservation {
+  display: inline-block;
+  padding: 1.6rem 2.4rem;
+  background-color: $secondary-color;
+  color: #0a0b0a;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
