@@ -24,7 +24,7 @@
           <a href="menu.html" class="nav-item">Menu</a>
         </li>
         <li>
-          <a href="#" class="nav-item">About</a>
+          <a href="about.html" class="nav-item">About</a>
         </li>
         <li>
           <a href="#" class="btn btn-primary">Book a Table</a>
@@ -58,7 +58,7 @@
             <a href="reservation.html" class="nav-item">reservation</a>
           </li>
           <li>
-            <a href="#" class="nav-item">About</a>
+            <a href="about.html" class="nav-item">About</a>
           </li>
           <li>
             <a href="#" class="nav-item">contact</a>
@@ -80,69 +80,88 @@
         </div>
       </header>
       <aside class="reservation">
-        <div class="reservation_textbox">
-          <div class="reservation_heading-wrapper">
-            <img
-              class="menu_pin"
-              src="./assets/icons/spoon-left.svg"
-              alt="spoon-left" />
+        <div class="reservation-wrapper">
+          <div class="reservation_textbox">
+            <div class="reservation_heading-wrapper">
+              <img
+                class="reservation pin"
+                src="./assets/icons/spoon-left.svg"
+                alt="spoon-left" />
 
-            <h2 class="heading-secondary big">reservation</h2>
-            <img
-              class="menu_pin"
-              src="./assets/icons/spoon-right.svg"
-              alt="spoon-right" />
+              <h2 class="heading-secondary big">reservation</h2>
+              <img
+                class="reservation pin"
+                src="./assets/icons/spoon-right.svg"
+                alt="spoon-right" />
+            </div>
+            <p class="reservation_paragraph">
+              Secure your spot at Qitchen, where exceptional sushi and a
+              remarkable dining experience await.
+            </p>
           </div>
-          <p class="reservation_paragraph">
-            Secure your spot at Qitchen, where exceptional sushi and a
-            remarkable dining experience await.
-          </p>
+          <form action="#" class="form">
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Name"
+                class="form-group br"
+                required />
+
+              <input
+                type="email"
+                class="form-input br"
+                placeholder="Email"
+                required />
+
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                required
+                class="form-input br" />
+            </div>
+            <div class="form-options">
+              <div class="form-option">
+                <input
+                  class="option br"
+                  type="text"
+                  placeholder="Guest"
+                  required />
+              </div>
+              <div class="form-option">
+                <input
+                  class="option br"
+                  type="text"
+                  placeholder="Date"
+                  required />
+              </div>
+              <div class="form-option">
+                <input
+                  class="option br"
+                  type="text"
+                  placeholder="Time"
+                  required />
+              </div>
+            </div>
+            <a href="#" class="reservation btn">Reserve</a>
+          </form>
         </div>
-        <form action="#" class="form">
-          <div class="form-group">
-            <input
-              type="text"
-              placeholder="Name"
-              class="form-group br"
-              required />
 
-            <input
-              type="email"
-              class="form-input br"
-              placeholder="Email"
-              required />
-
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              required
-              class="form-input br" />
-          </div>
-          <div class="form-options">
-            <div class="form-option">
-              <input
-                class="option br"
-                type="text"
-                placeholder="Guest"
-                required />
-            </div>
-            <div class="form-option">
-              <input
-                class="option br"
-                type="text"
-                placeholder="Date"
-                required />
-            </div>
-            <div class="form-option">
-              <input
-                class="option br"
-                type="text"
-                placeholder="Time"
-                required />
-            </div>
-          </div>
-          <a href="#" class="reservation btn">Reserve</a>
-        </form>
+        <footer class="footer">
+          <ul class="footer-list">
+            <span class="footer-list-wrapper">
+              <img src="/assets/icons/rhombus.svg" alt="rhombus icon" />
+              <li class="footer-text">By Pawel Gola</li>
+            </span>
+            <span class="footer-list-wrapper">
+              <img src="/assets/icons/rhombus.svg" alt="rhombus icon" />
+              <li class="footer-text">Licensing</li>
+            </span>
+            <span class="footer-list-wrapper">
+              <img src="/assets/icons/rhombus.svg" alt="rhombus icon" />
+              <li class="footer-text">Styleguide</li>
+            </span>
+          </ul>
+        </footer>
       </aside>
     </main>
   </body>

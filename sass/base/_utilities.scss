@@ -1,0 +1,14 @@
+.pin {
+  @include respond(phone) {
+    height: 2.6rem;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  @include respond(phone-medium) {
+    height: 2.2rem;
+  }
+}

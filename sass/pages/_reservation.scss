@@ -14,6 +14,10 @@ main {
     @include respond(tab-land) {
       height: 100vh;
     }
+
+    @include respond(phone-medium) {
+      background-position: left;
+    }
   }
 
   @include respond(tab-land) {
@@ -32,9 +36,21 @@ main {
     flex: 1;
     overflow-y: scroll;
 
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+
     @include respond(tab-land) {
       overflow-y: hidden;
-      margin: 5rem 0;
+    }
+
+    .reservation-wrapper {
+      padding: 2rem 0 5rem 0;
+      margin: 0 0 5rem 0;
+      border: 1px solid $default-border;
+      border-radius: $border-radius;
     }
 
     .reservation_textbox {
@@ -65,7 +81,7 @@ main {
       flex-direction: column;
       gap: 1.5rem;
 
-      width: 50%;
+      width: 75%;
       margin: 0 auto;
       background-color: transparent;
 
@@ -96,7 +112,7 @@ main {
       .form-options {
         width: 100%;
         display: flex;
-        gap: 1.5rem;
+        gap: 2.5rem;
         justify-content: center;
 
         .form-option {

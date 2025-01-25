@@ -1,4 +1,4 @@
-.menu-footer {
+.footer {
   border: 1px solid $default-border;
   border-radius: $border-radius;
   -webkit-border-radius: $border-radius;
@@ -6,7 +6,7 @@
   -ms-border-radius: $border-radius;
   -o-border-radius: $border-radius;
 
-  ul.menu-footer-list {
+  ul.footer-list {
     display: flex;
     align-items: center;
     justify-content: center;
