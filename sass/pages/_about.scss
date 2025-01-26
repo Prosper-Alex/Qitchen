@@ -41,10 +41,11 @@ main {
       margin: 0 0 5rem 0;
     }
 
-    .about_textbox {
-      text-align: center;
-      margin: 5rem;
+    @include respond(phone) {
+      margin-top: 5rem;
+    }
 
+    .about_textbox {
       .about_heading-wrapper {
         display: flex;
         align-items: center;
@@ -62,6 +63,67 @@ main {
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    .about_textbox {
+      display: flex;
+      gap: 1.5rem;
+      width: 100%;
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .textbox-text {
+        flex: 1;
+        height: 40rem;
+        width: 30rem;
+        padding: 5rem;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+
+        .about_paragraph {
+          margin-top: 15rem;
+          font-size: 1.6rem;
+
+          //   larger screens
+
+          @media only screen and (max-width: 1600px) {
+            margin-top: 10rem;
+          }
+        }
+      }
+
+      .textbox-image {
+        flex: 1;
+        height: 40rem;
+        width: 30rem;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: $border-radius;
+          -webkit-border-radius: $border-radius;
+          -moz-border-radius: $border-radius;
+          -ms-border-radius: $border-radius;
+          -o-border-radius: $border-radius;
+        }
+      }
     }
   }
 }
