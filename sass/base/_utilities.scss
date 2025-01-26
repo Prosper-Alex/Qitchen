@@ -1,4 +1,6 @@
 .pin {
+  height: 2.6rem;
+
   @include respond(phone) {
     height: 2.6rem;
   }
