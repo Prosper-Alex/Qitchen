@@ -21,26 +21,8 @@
     border-radius: inherit;
 
     @include respond(tab-land) {
-      height: 96vh;
+      height: 100vh;
       padding: 3rem;
-    }
-
-    @include respond(phone) {
-      height: 90vh;
-    }
-
-    @include respond(phone-medium) {
-      height: 90vh;
-      padding: 2rem;
-    }
-
-    @include respond(phone-small) {
-      height: 80vh;
-      padding: 2rem;
-    }
-    @include respond(phone-very-small) {
-      height: 80vh;
-      padding: 2rem;
     }
   }
 

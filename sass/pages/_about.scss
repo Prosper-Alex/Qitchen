@@ -38,7 +38,6 @@ main {
 
     @include respond(tab-land) {
       overflow-y: hidden;
-      margin: 0 0 5rem 0;
     }
 
     @include respond(phone) {
@@ -52,6 +51,7 @@ main {
         justify-content: center;
         gap: 1.5rem;
         margin-bottom: 2.5rem;
+        width: 100%;
       }
 
       .about_paragraph {
@@ -69,6 +69,8 @@ main {
       display: flex;
       gap: 1.5rem;
       width: 100%;
+      margin: 5rem 0;
+
       @include respond(phone) {
         display: flex;
         flex-direction: column;
@@ -77,10 +79,14 @@ main {
         justify-content: center;
       }
 
+      @include respond(tab-land) {
+        margin: 8rem 0;
+      }
+
       .textbox-text {
         flex: 1;
         height: 40rem;
-        width: 30rem;
+        width: auto;
         padding: 5rem;
         border: 1px solid $border-color;
         border-radius: $border-radius;
@@ -109,6 +115,7 @@ main {
         flex: 1;
         height: 40rem;
         width: 30rem;
+        flex-shrink: 0;
 
         @include respond(phone) {
           width: 100%;
@@ -122,6 +129,37 @@ main {
           -moz-border-radius: $border-radius;
           -ms-border-radius: $border-radius;
           -o-border-radius: $border-radius;
+        }
+      }
+    }
+
+    .about_rating {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      gap: 1.5rem;
+
+      @include respond(phone) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rate-box {
+        width: 100%;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+
+        .rate-icons {
+          margin-bottom: 1.5rem;
         }
       }
     }
