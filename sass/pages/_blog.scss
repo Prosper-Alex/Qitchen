@@ -1,0 +1,147 @@
+main {
+  display: flex;
+  gap: 1.6rem;
+  overflow: hidden;
+  position: relative;
+
+  .header.about {
+    height: calc(100vh - 4.8rem);
+    background-image: url("/assets/images/hero-4.jpg");
+    flex: 1.2;
+    height: 100vh;
+    position: sticky;
+
+    @include respond(tab-land) {
+      height: 100vh;
+    }
+
+    @include respond(phone-medium) {
+      background-position: left;
+    }
+  }
+
+  @include respond(tab-land) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  @include respond(tab-land) {
+    height: auto;
+  }
+
+  .about {
+    flex: 1;
+    overflow-y: scroll;
+
+    @include respond(tab-land) {
+      overflow-y: hidden;
+    }
+
+    @include respond(phone) {
+      margin-top: 5rem;
+    }
+
+    .blog_textbox {
+      .about_heading-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        width: 100%;
+      }
+
+      .blog_paragraph {
+        color: $secondary-color;
+        font-size: 1.8rem;
+        font-weight: 300;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .blog_textbox {
+      display: flex;
+      gap: 1.5rem;
+      width: 100%;
+      margin: 5rem 0;
+
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+        justify-content: center;
+      }
+
+      @include respond(tab-land) {
+        margin: 8rem 0;
+      }
+
+      .blog_post {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+
+        @include respond(phone) {
+          flex-direction: column;
+          gap: 3rem;
+        }
+
+        .blog_image {
+          flex: 1;
+          border-radius: $border-radius;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .blog_content {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          .blog_date {
+            color: $primary-color;
+            font-size: 1.4rem;
+            font-weight: 300;
+          }
+
+          .blog_title {
+            font-size: 2.5rem;
+            font-weight: 400;
+          }
+
+          .blog_text {
+            color: $secondary-color;
+            font-size: 1.8rem;
+            font-weight: 300;
+          }
+
+          .blog_link {
+            color: $primary-color;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.3s;
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
