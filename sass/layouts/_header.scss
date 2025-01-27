@@ -24,6 +24,16 @@
       height: 100vh;
       padding: 3rem;
     }
+
+    @include respond(tab-port) {
+      height: 96vh;
+      padding: 3rem;
+    }
+
+    @include respond(phone-medium) {
+      height: 92vh;
+      padding: 3rem;
+    }
   }
 
   .cta {
