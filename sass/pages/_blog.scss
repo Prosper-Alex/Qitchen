@@ -11,12 +11,10 @@ main {
     height: 100vh;
     position: sticky;
 
+    margin-top: 0;
+
     @include respond(tab-land) {
       height: 100vh;
-    }
-
-    @include respond(phone-medium) {
-      background-position: left;
     }
   }
 
