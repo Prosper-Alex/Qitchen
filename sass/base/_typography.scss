@@ -104,7 +104,18 @@
     font-size: 1.8rem;
   }
 
-  @include respond(phone-s mall) {
+  @include respond(phone-small) {
+    font-size: 1.7rem;
+  }
+}
+.heading-tertiary.rsm {
+  font-size: 2rem;
+
+  @include respond(phone-medium) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(phone-small) {
     font-size: 1.7rem;
   }
 }

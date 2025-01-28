@@ -67,7 +67,8 @@ main {
     }
 
     .about_textbox {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
       width: 100%;
       margin: 5rem 0;
@@ -100,6 +101,14 @@ main {
           width: 100%;
         }
 
+        .about_textbox-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          gap: 1.5rem;
+        }
+
         .about_paragraph {
           margin-top: 15rem;
           font-size: 1.6rem;
@@ -113,10 +122,8 @@ main {
       }
 
       .textbox-image {
-        flex: 1;
         height: 40rem;
-        width: 25rem;
-        flex-shrink: 0;
+        width: 100%;
 
         @include respond(phone) {
           width: 100%;
