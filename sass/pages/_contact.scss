@@ -48,14 +48,35 @@ main {
       display: none;
     }
 
-    .contact_textbox {
+    .contact-wrapper {
+      display: grid;
+      grid-auto-columns: 2, 1fr;
+
+      .contact_schedule-wrapper {
+        background-color: #fff;
+        .contact-schedule {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $border-color;
+          border-radius: $border-radius;
+          -webkit-border-radius: $border-radius;
+          -moz-border-radius: $border-radius;
+          -ms-border-radius: $border-radius;
+          -o-border-radius: $border-radius;
+          background-color: #fff;
+          padding: 5rem;
+          height: 30rem;
+        }
+      }
+
       .contact_heading-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
         margin-bottom: 2.5rem;
-        width: 100%;
       }
 
       .contact_paragraph {
