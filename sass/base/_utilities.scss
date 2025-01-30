@@ -7,11 +7,28 @@
 
   img {
     height: 100%;
-    width: auto;
+    width: 100%;
   }
 
   @include respond(phone-medium) {
-    height: 2.2rem;
+    height: 2rem;
+  }
+
+  @include respond(phone-small) {
+    display: none;
+  }
+}
+
+img.pin.sml {
+  width: 1.8rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  @include respond(phone-medium) {
+    height: 1.5rem;
   }
 }
 

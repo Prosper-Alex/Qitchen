@@ -67,6 +67,20 @@
 .heading-secondary.big {
   font-size: 4.5rem;
 
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+  @include respond(phone-medium) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone-small) {
+    font-size: 2.2rem;
+  }
+}
+.heading-secondary.medium {
+  font-size: 4rem;
+
   @include respond(phone-medium) {
     font-size: 3.5rem;
   }
@@ -89,12 +103,24 @@
 }
 
 .heading-tertiary {
-  line-height: 2.4rem;
+  line-height: 2.8rem;
   letter-spacing: 1px;
   color: $secondary-color;
   text-transform: uppercase;
   font-weight: lighter;
   font-family: $secondary-font;
+}
+
+.heading-tertiary.big {
+  font-size: 2.4rem;
+
+  @include respond(phone-medium) {
+    font-size: 2rem;
+  }
+
+  @include respond(phone-small) {
+    font-size: 1.7rem;
+  }
 }
 
 .heading-tertiary.sm {

@@ -4,9 +4,9 @@ main {
   overflow: hidden;
   position: relative;
 
-  .header.about {
+  .header.blog {
     height: calc(100vh - 4.8rem);
-    background-image: url("/assets/images/hero-4.jpg");
+    background-image: url("/assets/images/hero-6.jpg");
     flex: 1.2;
     height: 100vh;
     position: sticky;
@@ -30,7 +30,7 @@ main {
     height: auto;
   }
 
-  .about {
+  .blog {
     flex: 1;
     overflow-y: scroll;
 
@@ -42,20 +42,35 @@ main {
       margin-top: 5rem;
     }
 
-    .blog_textbox {
-      .about_heading-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-bottom: 2.5rem;
-        width: 100%;
-      }
+    .blog_heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      width: 100%;
 
-      .blog_paragraph {
-        color: $secondary-color;
-        font-size: 1.8rem;
-        font-weight: 300;
+      .heading-secondary.medium {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        @media only screen and (max-width: 1400px) {
+          font-size: 3.4rem;
+        }
+
+        @include respond(phone) {
+          font-size: 3rem;
+        }
+
+        @include respond(phone-medium) {
+          font-size: 2.4;
+        }
+
+        @include respond(phone-small) {
+          font-size: 2rem;
+        }
       }
     }
 
@@ -63,81 +78,77 @@ main {
       display: none;
     }
 
-    .blog_textbox {
-      display: flex;
-      gap: 1.5rem;
-      width: 100%;
-      margin: 5rem 0;
-
-      @include respond(phone) {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        width: 100%;
-        justify-content: center;
-      }
-
+    .blog_textbox-wrapper {
       @include respond(tab-land) {
-        margin: 8rem 0;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+        padding: 3rem;
       }
 
-      .blog_post {
+      .blog_textbox {
         display: flex;
         gap: 1.5rem;
-        margin-bottom: 3rem;
+        width: 100%;
+        margin: 5rem 0;
+
+        .blog_text-heading {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .blog_paragraph {
+          color: $secondary-color;
+          font-size: 1.6rem;
+          line-height: 2.8rem;
+          font-family: $primary-font;
+          color: #f5f2eab2;
+          margin-top: 1rem;
+        }
+
+        .blog_image {
+          img {
+            height: 20rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: $border-radius;
+            -webkit-border-radius: $border-radius;
+            -moz-border-radius: $border-radius;
+            -ms-border-radius: $border-radius;
+            -o-border-radius: $border-radius;
+
+            @include respond(phone) {
+              height: 30rem;
+            }
+          }
+        }
+
+        @include respond(phone) {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          width: 100%;
+          justify-content: center;
+        }
+
+        @include respond(tab-land) {
+          margin: 8rem 0;
+        }
 
         @include respond(phone) {
           flex-direction: column;
           gap: 3rem;
         }
 
-        .blog_image {
-          flex: 1;
-          border-radius: $border-radius;
-          overflow: hidden;
-          position: relative;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-
-        .blog_content {
-          flex: 2;
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-
-          .blog_date {
-            color: $primary-color;
-            font-size: 1.4rem;
-            font-weight: 300;
-          }
-
-          .blog_title {
-            font-size: 2.5rem;
-            font-weight: 400;
-          }
-
-          .blog_text {
-            color: $secondary-color;
-            font-size: 1.8rem;
-            font-weight: 300;
-          }
-
-          .blog_link {
-            color: $primary-color;
-            font-size: 1.6rem;
-            font-weight: 400;
-            text-decoration: none;
-            transition: all 0.3s;
-
-            &:hover {
-              color: $secondary-color;
-            }
-          }
+        .blog_date {
+          color: $primary-color;
+          font-size: 1.4rem;
+          font-weight: 300;
         }
       }
     }
