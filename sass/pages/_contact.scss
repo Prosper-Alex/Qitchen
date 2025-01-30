@@ -48,27 +48,15 @@ main {
       display: none;
     }
 
-    .contact-wrapper {
+    .contact-schedule-wrapper {
       display: grid;
-      grid-auto-columns: 2, 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
 
-      .contact_schedule-wrapper {
-        background-color: #fff;
-        .contact-schedule {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid $border-color;
-          border-radius: $border-radius;
-          -webkit-border-radius: $border-radius;
-          -moz-border-radius: $border-radius;
-          -ms-border-radius: $border-radius;
-          -o-border-radius: $border-radius;
-          background-color: #fff;
-          padding: 5rem;
-          height: 30rem;
-        }
+      @include respond(phone) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
       }
 
       .contact_heading-wrapper {
@@ -76,13 +64,216 @@ main {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
+
+        @include respond(big-desktop) {
+          margin-bottom: 5rem;
+        }
       }
 
       .contact_paragraph {
         color: $secondary-color;
         font-size: 1.8rem;
         font-weight: 300;
+      }
+
+      .contact-schedule {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: 1.6rem;
+        color: $secondary-color;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+        width: 100%;
+        padding: 5rem;
+        height: 43rem;
+
+        @include respond(big-desktop) {
+          padding: 2rem;
+        }
+
+        @media only screen and (max-width: 1800px) {
+          padding: 2rem;
+        }
+
+        @media only screen and (max-width: 1400px) {
+          font-size: 1.4rem;
+        }
+
+        ul.schedule {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 2rem;
+
+          li.schedule-list {
+            list-style: none;
+
+            @media only screen and (max-width: 2000px) {
+              img.schedule-dot {
+                width: 5rem;
+              }
+            }
+
+            @include respond(tab-land) {
+              img.schedule-dot {
+                width: auto;
+              }
+            }
+
+            @include respond(phone-small) {
+              img.schedule-dot {
+                width: 12rem;
+              }
+            }
+          }
+        }
+      }
+
+      .schedule-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: auto;
+        height: 30rem;
+        margin-bottom: 4rem;
+
+        @include respond(phone) {
+          margin-bottom: 16rem;
+        }
+
+        img {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+          border-radius: $border-radius;
+          -webkit-border-radius: $border-radius;
+          -moz-border-radius: $border-radius;
+          -ms-border-radius: $border-radius;
+          -o-border-radius: $border-radius;
+        }
+      }
+    }
+
+    .contact_info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+
+      @include respond(phone) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+      }
+
+      .contact-map {
+        position: relative;
+        height: 40rem;
+        margin-bottom: 4rem;
+
+        .map {
+          height: 100%;
+          border-radius: $border-radius;
+          -webkit-border-radius: $border-radius;
+          -moz-border-radius: $border-radius;
+          -ms-border-radius: $border-radius;
+          -o-border-radius: $border-radius;
+        }
+
+        .tab {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: 99;
+
+          .titleBtn {
+            font-family: "Forum", serif;
+            text-transform: uppercase;
+            padding-top: 1.2rem;
+            padding-left: 2.4rem;
+            border-radius: 2.4rem 0 0 0;
+            background-color: $primary-color;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            color: $secondary-color;
+            font-size: 1.6rem;
+            font-weight: 100;
+            font-weight: lighter;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .textbox-text {
+        display: flex;
+        flex-direction: column;
+
+        font-size: 1.6rem;
+        color: $secondary-color;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        -ms-border-radius: $border-radius;
+        -o-border-radius: $border-radius;
+        width: 100%;
+        padding: 5rem;
+        height: 40rem;
+
+        @include respond(big-desktop) {
+          padding: 2rem;
+        }
+
+        @media only screen and (max-width: 1800px) {
+          padding: 2rem;
+          justify-content: space-around;
+        }
+        @media only screen and (max-width: 1400px) {
+          font-size: 1.4rem;
+        }
+
+        .contact_heading-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1.5rem;
+          margin-bottom: 3rem;
+
+          @include respond(big-desktop) {
+            margin-bottom: 5rem;
+          }
+        }
+
+        ul.info {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          li.info_list {
+            display: flex;
+            justify-content: space-between;
+
+            .info_list-name {
+              text-transform: uppercase;
+            }
+
+            .social-icon {
+              display: flex;
+              gap: 1rem;
+            }
+          }
+        }
       }
     }
   }
