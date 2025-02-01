@@ -132,6 +132,7 @@ main {
         img {
           height: 100%;
           width: 100%;
+          object-fit: cover;
           border-radius: $border-radius;
           -webkit-border-radius: $border-radius;
           -moz-border-radius: $border-radius;
