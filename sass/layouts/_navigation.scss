@@ -131,14 +131,14 @@
       display: flex;
       font-size: 2.8rem;
     }
+  }
 
-    #navi-toggle:checked ~ .logo-wrapper span.open {
-      display: none;
-    }
+  #navi-toggle:checked ~ .logo-wrapper span.open {
+    display: none;
+  }
 
-    #navi-toggle:checked ~ .logo-wrapper span.close {
-      display: flex;
-    }
+  #navi-toggle:checked ~ .logo-wrapper span.close {
+    display: flex;
   }
 
   .navigation-checkbox {
