@@ -76,18 +76,6 @@ The design mimics luxury restaurant websites seen in global hospitality brands, 
 
 ---
 
-## 👥 Ideal Use Cases
-
-This project can serve as a template or inspiration for:
-
-- Boutique restaurant brands
-- Hospitality businesses
-- Food & lifestyle blogs
-- Catering services
-- Event planning websites
-
----
-
 ## 👤 Author
 
 **Prosper Alex**  
