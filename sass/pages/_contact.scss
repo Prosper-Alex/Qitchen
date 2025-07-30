@@ -4,31 +4,9 @@ main {
   overflow: hidden;
   position: relative;
 
-  .header.contact {
-    height: calc(100vh - 4.8rem);
-    background-image: url("/assets/images/hero-5.jpg");
-    flex: 1.2;
-    height: 100vh;
-    position: sticky;
-
-    @include respond(tab-land) {
-      height: 100vh;
-    }
-
-    @include respond(phone-medium) {
-      background-position: left;
-    }
-  }
-
   @include respond(tab-land) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     flex-direction: column;
     gap: 1.6rem;
-  }
-
-  @include respond(tab-land) {
     height: auto;
   }
 
@@ -54,9 +32,7 @@ main {
       gap: 2rem;
 
       @include respond(phone) {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
+        grid-template-columns: 1fr;
       }
 
       .contact_heading-wrapper {
@@ -81,15 +57,10 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-
         font-size: 1.6rem;
         color: $secondary-color;
         border: 1px solid $border-color;
         border-radius: $border-radius;
-        -webkit-border-radius: $border-radius;
-        -moz-border-radius: $border-radius;
-        -ms-border-radius: $border-radius;
-        -o-border-radius: $border-radius;
         width: 100%;
         padding: 5rem;
         height: 43rem;
@@ -98,11 +69,11 @@ main {
           padding: 2rem;
         }
 
-        @media only screen and (max-width: 1800px) {
+        @media (max-width: 1800px) {
           padding: 2rem;
         }
 
-        @media only screen and (max-width: 1400px) {
+        @media (max-width: 1400px) {
           font-size: 1.4rem;
         }
 
@@ -112,10 +83,14 @@ main {
           flex-direction: column;
           gap: 2rem;
 
+          @include respond(tab-land) {
+            align-items: flex-end;
+          }
+
           li.schedule-list {
             list-style: none;
 
-            @media only screen and (max-width: 2000px) {
+            @media (max-width: 2000px) {
               img.schedule-dot {
                 width: 5rem;
               }
@@ -140,7 +115,6 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        width: auto;
         height: 30rem;
         margin-bottom: 4rem;
 
@@ -153,10 +127,6 @@ main {
           height: 20rem;
           object-fit: cover;
           border-radius: $border-radius;
-          -webkit-border-radius: $border-radius;
-          -moz-border-radius: $border-radius;
-          -ms-border-radius: $border-radius;
-          -o-border-radius: $border-radius;
         }
       }
     }
@@ -168,9 +138,7 @@ main {
       margin: 2rem 0;
 
       @include respond(phone) {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
+        grid-template-columns: 1fr;
       }
 
       .contact-map {
@@ -181,10 +149,6 @@ main {
         .map {
           height: 100%;
           border-radius: $border-radius;
-          -webkit-border-radius: $border-radius;
-          -moz-border-radius: $border-radius;
-          -ms-border-radius: $border-radius;
-          -o-border-radius: $border-radius;
         }
 
         .tab {
@@ -196,8 +160,7 @@ main {
           .titleBtn {
             font-family: "Forum", serif;
             text-transform: uppercase;
-            padding-top: 1.2rem;
-            padding-left: 2.4rem;
+            padding: 1.2rem 0 0 2.4rem;
             border-radius: 2.4rem 0 0 0;
             background-color: $primary-color;
             display: flex;
@@ -208,7 +171,6 @@ main {
             letter-spacing: 1px;
             color: $secondary-color;
             font-size: 1.6rem;
-            font-weight: 100;
             font-weight: lighter;
             cursor: pointer;
           }
@@ -218,15 +180,10 @@ main {
       .textbox-text {
         display: flex;
         flex-direction: column;
-
         font-size: 1.6rem;
         color: $secondary-color;
         border: 1px solid $border-color;
         border-radius: $border-radius;
-        -webkit-border-radius: $border-radius;
-        -moz-border-radius: $border-radius;
-        -ms-border-radius: $border-radius;
-        -o-border-radius: $border-radius;
         width: 100%;
         padding: 5rem;
         height: 40rem;
@@ -235,11 +192,12 @@ main {
           padding: 2rem;
         }
 
-        @media only screen and (max-width: 1800px) {
+        @media (max-width: 1800px) {
           padding: 2rem;
           justify-content: space-around;
         }
-        @media only screen and (max-width: 1400px) {
+
+        @media (max-width: 1400px) {
           font-size: 1.4rem;
         }
 
@@ -276,5 +234,21 @@ main {
         }
       }
     }
+  }
+}
+
+// SEPARATE this one, don’t nest under main
+.header.contact {
+  flex: 1.2;
+  height: calc(100vh - 4.8rem);
+  background-image: url("/assets/images/hero-5.jpg");
+  position: sticky;
+
+  @include respond(tab-land) {
+    height: 100vh;
+  }
+
+  @include respond(phone-medium) {
+    background-position: left;
   }
 }
